@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>single frontadd</title>
+<script>
+var head;
+class Node{
+    constructor(val){
+        this.data = val;
+        this.next = null;
+
+    }
+}
+
+var head = new Node(10);
+var second = new Node(20);
+var third= new Node(30);
+
+head.next = second;
+second.next = third;
+console.log(head.data+"->"+second.data+"->"+third.data);
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+var head;
+class Node
+{
+    constructor(val)
+    {
+        this.data = val;
+        this.next = null;
+    }
+    
+}
+
+function frontadd(val){
+
+    var new_node = new Node(val);
+
+    if(head == null){
+        head = new_node;
+    }
+    else{
+        new_node.next  = head;
+        head = new_node;
+    }
+}
+
+
+var head = new Node(10);
+var second = new Node(20);
+var third= new Node(30);
+
+head.next = second;
+second.next = third;
+
+frontadd(1000);
+
+var current_node = head; 
+while(current_node.next){
+    console.log("current node is "+current_node.data);
+    current_node = current_node.next;
+}
+
+console.log("head is "+head.data);
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

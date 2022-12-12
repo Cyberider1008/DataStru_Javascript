@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+var head;
+class Node{
+    constructor(val){
+        this.data = val;
+        this.next = null;
+    }
+}
+
+
+function lastadd(val){
+    var new_node = new Node(val);
+    if(head == null){
+        head = new_node;
+    }
+    else{
+        console.log("this");
+
+        var current_node1 = head;
+        while(current_node1.next){
+            current_node1 = current_node1.next;
+
+        }
+        current_node1.next = new_node;
+
+    }
+}
+
+var head = new Node(10);
+var second = new Node(20);
+var third= new Node(30);
+
+head.next = second;
+second.next = third;
+
+
+lastadd(1000);
+
+
+var current_node = head; 
+while(current_node.next != null){
+    console.log("current node is "+current_node.data+" address is "+current_node.next);
+    current_node = current_node.next;
+}
+console.log("current node is "+current_node.data+" address is "+current_node.next);
+
+
+
+
+</script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
