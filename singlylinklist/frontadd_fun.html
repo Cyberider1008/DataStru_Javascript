@@ -1,0 +1,46 @@
+<script>
+
+    var head;
+    class Node{
+        constructor(val){
+            this.data = val;
+            this.next = null;
+    
+        }
+    }
+    
+    
+    function frontadd_push(val){
+        var new_node = new Node(val);
+        if(head == null){
+            head = new_node
+        }
+        else{
+        new_node.next = head;
+        head = new_node;    
+        
+        }
+    }
+    
+    function printlist(){
+    
+        var current = head;
+        var str = '';
+        while(current){
+            str+=current.data+"->";
+            current = current.next;
+    
+        }
+        console.log(str);
+    }
+    
+    
+    frontadd_push(10);
+    frontadd_push(100);
+    frontadd_push(1000);
+    
+    
+    printlist();
+    
+    
+    </script>

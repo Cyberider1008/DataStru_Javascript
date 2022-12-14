@@ -1,0 +1,49 @@
+<script>
+
+var head;
+class Node{
+    constructor(val){
+        this.data = val;
+        this.next = null;
+
+    }
+}
+
+
+function lastadd_push(val){
+    var new_node = new Node(val);
+    if(head == null){
+        head = new_node
+    }
+    else{
+        var temp = head;
+        while(temp.next){
+            temp = temp.next;
+
+        }
+        temp.next = new_node;
+    }
+}
+
+function printlist(){
+
+    var current = head;
+    var str = '';
+    while(current){
+        str+=current.data+"->";
+        current = current.next;
+
+    }
+    console.log(str);
+}
+
+
+lastadd_push(10);
+lastadd_push(100);
+lastadd_push(1000);
+
+
+printlist();
+
+
+</script>

@@ -1,0 +1,82 @@
+<script>
+
+    var head;
+    class Node{
+        constructor(val){
+            this.data = val;
+            this.next = null;
+    
+        }
+    }
+    
+    
+    function remove_pop(index){
+        
+        if (index < 0)
+        return console.log("Please Enter a valid index");
+    else {
+        var current, prev, it = 0;
+        current = head;
+        prev = current;
+ 
+        // delete first element
+        if (index === 0) {
+            head = current.next;
+        } else {
+           
+            while (it < index) {
+                it++;
+                prev = current;
+                current = current.next;
+            }
+ 
+            // remove the element
+            prev.next = current.next;
+        }
+ 
+    }
+} 
+
+function lastadd_push(val){
+    var new_node = new Node(val);
+    if(head == null){
+        head = new_node
+    }
+    else{
+        var temp = head;
+        while(temp.next){
+            temp = temp.next;
+
+        }
+        temp.next = new_node;
+    }
+}
+
+
+
+
+    function printlist(){
+    
+        var currentent = head;
+        var str = '';
+        while(currentent){
+            str+=currentent.data+"->";
+            currentent = currentent.next;
+    
+        }
+        console.log(str);
+    }
+
+    lastadd_push(10);
+lastadd_push(100);
+lastadd_push(1000);
+
+
+    
+    remove_pop(1);
+    
+    
+    printlist();
+    
+    
+    </script>
