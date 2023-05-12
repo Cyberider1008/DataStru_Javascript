@@ -1,4 +1,3 @@
-<script>
 
 var head;
 class Node{
@@ -11,10 +10,13 @@ class Node{
 
 function printlist(){
     var last = head;
-    while(last.next != null){
-        console.log(last.data+"-->");
+    var string1 = '';
+    while(last != null){
+        string1 += last.data+" -> ";
         last = last.next;
     }
+
+    console.log(string1);
 }
 
 var head = new Node(10);
@@ -23,10 +25,9 @@ var third= new Node(30);
 
 head.next = second;
 second.next = third;
-console.log(head.data+"->"+second.data+"->"+third.data);
+console.log(head.data+" -> "+second.data+" -> "+third.data);
 
 console.log("using printline fun.......");
 
 printlist()
 
-</script>
